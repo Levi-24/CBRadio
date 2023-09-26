@@ -45,7 +45,17 @@ namespace ConsoleApp53
             var f8 = radio.GroupBy(h => h.Nev).Count();
             Console.WriteLine($"8.Feladat: Sofőrök száma: {f8} fő");
 
+            //var f9 = radio.Max(h => h.AdasDb);
+            //string f9n = "";
+            //foreach (var item in radio)
+            //{
+            //    if (item.AdasDb == f9) f9n = item.Nev;
+            //}
 
+            var f9 = radio.OrderBy(kvp => kvp.AdasDb).Last();
+            Console.WriteLine("9.Feladat: Legtöbb adást indító sofőr");
+            Console.WriteLine($"\t Név: {f9.Nev}");
+            Console.WriteLine($"\t Adások száma: {f9.AdasDb} alkalom");
         }
         static int AtszamolPercbe(TimeSpan oraPerc)
         {
