@@ -39,8 +39,17 @@ namespace ConsoleApp53
             writer.WriteLine("Kezdes;Nev;AdasDb");
             foreach (var item in radio)
             {
-                writer.WriteLine($"{Convert.ToString(item.AtszamolPercre)};{item.Nev};{item.AdasDb}");
+                writer.WriteLine($"{Convert.ToString(AtszamolPercbe(item.OraPerc))};{item.Nev};{item.AdasDb}");
             }
+
+            var f8 = radio.GroupBy(h => h.Nev).Count();
+            Console.WriteLine($"8.Feladat: Sofőrök száma: {f8} fő");
+
+
+        }
+        static int AtszamolPercbe(TimeSpan oraPerc)
+        {
+            return Convert.ToInt32(oraPerc.TotalMinutes);
         }
     }
 }
