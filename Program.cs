@@ -31,6 +31,7 @@ namespace ConsoleApp53
             if (f5 != 0) Console.WriteLine($"\t {nev} {f5}x használta a CB-rádiót");
             else Console.WriteLine("\t Nincs ilyen nevű sofőr!");
 
+
         }
     }
 }
