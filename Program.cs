@@ -15,9 +15,7 @@ namespace ConsoleApp53
                 path: "../../../src/cb.txt",
                 Encoding.UTF8
                 );
-
             _ = sr.ReadLine();
-
             while (!sr.EndOfStream) radio.Add(new Radio(sr.ReadLine()));
 
             Console.WriteLine($"3.Feladat: Bejegyzések száma:{radio.Count}");
